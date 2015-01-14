@@ -1,0 +1,16 @@
+<h4>Now Playing...</h4>
+{{currentStartSecs*1000 | date:'HH:mm'}}
+<div class="jumbotron">
+  <a href="#"><img ng-src={{currentImageRef}} err-SRC="images/yeoman.png"/></a>
+  <p>{{currentArtist}} - {{currentTrack}}</p>
+
+</div>
+{{currentStartTime}}
+<div class="row marketing">
+<p>{{seconds}}</p>
+  <p>Recently Played Tracks...</p>
+  <span ng-repeat="t in tracks" ng-show="!$first">
+    <a href="#"><img ng-src={{t.image}} err-SRC="images/default.png"/></a><p>{{t.artist}} - {{t.name}} {{t.date*1000 | date:'HH:mm'}}</p>
+    <!-- <p>{{doc.uuid}}</p> -->
+  </span>
+</div>
